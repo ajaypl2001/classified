@@ -435,7 +435,7 @@ table th a .fa.fa-info {
 }
 .profile.clearfix {
 	padding-bottom: 18px;
-	background: #354b28;
+	background: #5cb85c;
 }
 .btn.btn-dark:focus {
 	background: white;
@@ -1099,7 +1099,7 @@ table .btn-group .dropdown-menu {
 
 .option-store ul.resp-tabs-list li.resp-tab-active > button, .resp-tabs-list li button:hover, .resp-tabs-list li button:focus, .resp-tabs-list li button:active{
 	background: #15cb85c;
-	color: #fff
+	color: #fff;
 }
 .resp-tabs-list li button:hover, .resp-tabs-list li button:focus{
 	color: #000

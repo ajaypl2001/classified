@@ -347,24 +347,31 @@
                             </div>
                         </li>
                     </ul>
-                    <a class="navbar-brand" href="http://localhost/classified/"><img
-                            src="http://localhost/classified/assets/images/logo.png"></a>
+                    <a class="navbar-brand" href="http://localhost/classified/" style=" padding:0; ">
+                        <img src="{{ asset('images/Opulence.png')}}" >
+                        </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active categry_outr hidden-xs"><a class="categry_link" data-target="#myNavbar"
                                 onclick="openNav()"><img
-                                    src="http://localhost/classified/assets/images/category.png">&nbspCATEGORY</a>
+                                    src="{{ asset('images/category.png')}}">&nbspCATEGORY</a>
                             <div class="categry_dtl" id="navv" style="width: 290px; display: none;">
 
                                 <ul class="ctry_ul">
-                                    @foreach ($data as $catdata)
-                                        <li><a style="cursor: pointer;"><i class="fa fa-shopping-cart"
-                                                    aria-hidden="true"></i>{{ $catdata['CateName']}}</a>
+                                    @foreach ($result as $catdata)
+                                        <li><a style="cursor: pointer;"><i class="{{ $catdata['CateIcon']}}"aria-hidden="true"></i>{{ $catdata['CateName']}}</a>
                                             <div class="sub-menu2">
                                                 <div class="col-sm-12 sub-menu-inner">
                                                     <ul>
+                                                        @foreach ($catdata['subcategories'] as $subcat)
+
                                                         <li> <a style="cursor: pointer;"
+                                                            href="http://localhost/classified/adslisting/index/1"><i
+                                                                class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                {{ $subcat }}</a></li>
+                                                      @endforeach
+                                                        {{-- <li> <a style="cursor: pointer;"
                                                                 href="http://localhost/classified/adslisting/index/1"><i
                                                                     class="fa fa-angle-right" aria-hidden="true"></i>
                                                                 Appliances</a></li>
@@ -431,7 +438,8 @@
                                                         <li> <a style="cursor: pointer;"
                                                                 href="http://localhost/classified/adslisting/index/17"><i
                                                                     class="fa fa-angle-right" aria-hidden="true"></i>
-                                                                Other</a></li>
+                                                                Other</a></li> --}}
+                                                                
 
                                                     </ul>
                                                 </div>
@@ -740,9 +748,9 @@
                             </div>
                         </li>
                         <li><a href="http://localhost/classified/blog/index/1"><img
-                                    src="http://localhost/classified/assets/images/blog.png">&nbspBLOG</a></li>
+                                    src="{{ asset('images/blog.png')}}">&nbspBLOG</a></li>
                         <li><a href="http://localhost/classified/home/contactus"><img
-                                    src="http://localhost/classified/assets/images/contact.png">&nbspCONTACT US</a>
+                                    src="{{ asset('images/contact.png')}}">&nbspCONTACT US</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -953,37 +961,37 @@
                     <div data-u="loading" class="jssorl-009-spin"
                         style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                         <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"
-                            src="http://localhost/classified/assets/images/slider/spin.svg" />
+                            src="{{ asset('images/slider/spin.svg')}}" />
                     </div>
                     <div data-u="slides"
                         style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
                         <div>
-                            <img data-u="image" src="http://localhost/classified/assets/images/slider/0012.jpg" />
+                            <img data-u="image" src="{{ asset('images/slider/0012.jpg')}}" />
                             <div data-u="caption" data-t="0"
                                 style="position:absolute;top:120px;left:75px;width:470px;height:220px;">
                                 <img style="position:absolute;top:0px;left:0px;width:470px;height:220px;"
-                                    src="http://localhost/classified/assets/images/slider/c-phone-horizontal.png" />
+                                    src="{{ asset('images/slider/c-phone-horizontal.png')}}" />
                                 <div
                                     style="position:absolute;top:4px;left:45px;width:379px;height:213px;overflow:hidden;">
                                     <img data-u="caption" data-t="1"
                                         style="position:absolute;top:0px;left:0px;width:379px;height:213px;"
-                                        src="http://localhost/classified/assets/images/slider/c-slide-1.jpg" />
+                                        src="{{ asset('images/slider/c-slide-1.jpg')}}" />
                                     <img data-u="caption" data-t="2"
                                         style="position:absolute;top:0px;left:379px;width:379px;height:213px;"
-                                        src="http://localhost/classified/assets/images/slider/c-slide-3.jpg" />
+                                        src="{{ asset('images/slider/c-slide-3.jpg')}}" />
                                 </div>
                                 <img style="position:absolute;top:4px;left:45px;width:379px;height:213px;"
-                                    src="http://localhost/classified/assets/images/slider/c-navigator-horizontal.png" />
+                                    src="{{ asset('images/slider/c-navigator-horizontal.png')}}" />
                                 <img data-u="caption" data-t="3"
                                     style="position:absolute;top:476px;left:454px;width:63px;height:77px;"
-                                    src="http://localhost/classified/assets/images/slider/hand.png" />
+                                    src="{{ asset('images/slider/hand.png')}}" />
                             </div>
                         </div>
                         <div>
-                            <img data-u="image" src="http://localhost/classified/assets/images/slider/0022.jpg" />
+                            <img data-u="image" src="{{ asset('images/slider/0022.jpg')}}" />
                         </div>
                         <div>
-                            <img data-u="image" src="http://localhost/classified/assets/images/slider/0032.jpg" />
+                            <img data-u="image" src="{{ asset('images/slider/0032.jpg')}}" />
                             <div
                                 style="position:absolute;top:30px;left:30px;width:480px;height:130px;background-color:rgba(255,188,5,0.8);font-size:40px;color:#000000;line-height:1.5;padding:5px 5px 5px 5px;box-sizing:border-box;">
                                 TOUCH SWIPE
@@ -1034,15 +1042,9 @@
                                 action="http://localhost/classified/adslisting/index">
                                 <div class="form-group width_form">
                                     <select class="form-control" id="sel1" name="cate_id">
-                                        <option>Select a Categories</option>
-                                        <option value="1">BUY & SALE</option>
-                                        <option value="2">ELECTRONICS</option>
-                                        <option value="3">CARS & VEHICLES For Sale</option>
-                                        <option value="4">CARS & VEHICLES For Rent</option>
-                                        <option value="5">JOBS, SERVICES</option>
-                                        <option value="6">REAL ESTATE For Sale</option>
-                                        <option value="7">REAL ESTATEFor Rent</option>
-                                        <option value="8">Community & Promotions</option>
+                                        @foreach ($result as $catdata)
+                                           <option>{{ $catdata['CateName']}}</option>                               
+                                         @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group width_form">
@@ -1092,38 +1094,36 @@
         <div class="container">
             <h1><a href="http://localhost/classified/categories">ALL CATEGORIES</a></h1>
             <div class="row">
-
-
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
-                    <div class="border">
-                        <div class="absolute">
-                            <a href="http://localhost/classified/categories"><img
-                                    src="http://localhost/classified/assets/images/catagories/BuySale3.png"
-                                    style="width: 30px;"></a>
-                        </div>
-                        <h2 class="cate_heading">BUY & SALE</h2>
-                        <a href="http://localhost/classified/adslisting/index/1"
-                            style="cursor:pointer;">Appliances</a>
-                        <a href="http://localhost/classified/adslisting/index/2" style="cursor:pointer;">Art,
-                            Collectibles</a>
-                        <a href="http://localhost/classified/adslisting/index/3" style="cursor:pointer;">Baby
-                            Items</a>
-                        <a href="http://localhost/classified/adslisting/index/4" style="cursor:pointer;">Books</a>
-                        <a href="http://localhost/classified/adslisting/index/5" style="cursor:pointer;">Cds, Dvds and
-                            Miscellaneous</a>
-                        <a href="http://localhost/classified/adslisting/index/6" style="cursor:pointer;">Clothing</a>
-                        <div class="drop">
-                            <a href="http://localhost/classified/categories" style="cursor: pointer;"><i
-                                    class="fa fa-angle-down" aria-hidden="true"></i></a>
+                @foreach ($result as $catdata)                          
+                    <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                        <div class="border">
+                            <div class="absolute">
+                                <a href="http://localhost/classified/categories"><img src="{{ $catdata['CateImage'];}}" style="width: 30px;"></a>
+                            </div>
+                            <h2 class="cate_heading">{{ $catdata['CateName']}}</h2>
+                            <a href="http://localhost/classified/adslisting/index/1"
+                                style="cursor:pointer;">Appliances</a>
+                            <a href="http://localhost/classified/adslisting/index/2" style="cursor:pointer;">Art,
+                                Collectibles</a>
+                            <a href="http://localhost/classified/adslisting/index/3" style="cursor:pointer;">Baby
+                                Items</a>
+                            <a href="http://localhost/classified/adslisting/index/4" style="cursor:pointer;">Books</a>
+                            <a href="http://localhost/classified/adslisting/index/5" style="cursor:pointer;">Cds, Dvds and
+                                Miscellaneous</a>
+                            <a href="http://localhost/classified/adslisting/index/6" style="cursor:pointer;">Clothing</a>
+                            <a href="http://localhost/classified/adslisting/index/6" style="cursor:pointer;">Clothing</a>
+                      
+                       
+                            <div class="drop">
+                                <a href="http://localhost/classified/categories" style="cursor: pointer;"><i
+                                        class="fa fa-angle-down" aria-hidden="true"></i></a>
+                            </div>
                         </div>
                     </div>
-                </div>
+                @endforeach
 
 
-
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
                             <a href="http://localhost/classified/categories"><img
@@ -1148,9 +1148,9 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
                             <a href="http://localhost/classified/categories"><img
@@ -1173,9 +1173,9 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
                             <a href="http://localhost/classified/categories"><img
@@ -1193,9 +1193,9 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
                             <a href="http://localhost/classified/categories"><img
@@ -1220,8 +1220,8 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
-
+                </div> --}}
+{{-- 
                 <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
@@ -1241,12 +1241,12 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
 
 
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
                             <a href="http://localhost/classified/categories"><img
@@ -1269,12 +1269,12 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
 
 
 
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
+                {{-- <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                     <div class="border">
                         <div class="absolute">
                             <a href="http://localhost/classified/categories"><img
@@ -1298,7 +1298,7 @@
                                     class="fa fa-angle-down" aria-hidden="true"></i></a>
                         </div>
                     </div>
-                </div>
+                </div> --}}
 
             </div>
         </div>
@@ -1315,11 +1315,13 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">AD CATEGORIES<i
                                 class="fa fa-angle-down fa-lg" aria-hidden="true"></i></i></a>
                         <ul class="dropdown-menu">
-                            <li><a style="cursor: pointer;">Accessories</a></li>
-                            <li><a style="cursor: pointer;">Businesses</a></li>
+                            @foreach ($internation_cat as $intcat) 
+                               <li><a style="cursor: pointer;">{{$intcat->InternationalCateName}}</a></li>
+                            @endforeach
+                            {{-- <li><a style="cursor: pointer;">Businesses</a></li>
                             <li><a style="cursor: pointer;">Products</a></li>
                             <li><a style="cursor: pointer;">Traditional Clothes</a></li>
-                            <li><a style="cursor: pointer;">Everything Else</a></li>
+                            <li><a style="cursor: pointer;">Everything Else</a></li> --}}
                         </ul>
                     </li>
                     <li><a data-toggle="tab" href="#menu1">LATEST ADS</a></li>

@@ -17,4 +17,8 @@ class Categorie extends Model
         'CateModify',
         'CateStatus'
     ];
+    public function subcategories()
+    {
+        return $this->hasMany(Subcategory::class, 'CateId');
+    }
 }

@@ -5,20 +5,20 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="icon" href="http://localhost/classified/assets/images/favicon.ico" type="images/favicon-icon.png">
+    <link rel="icon" href="{{ asset('images/Opulence.png') }}" type="images/favicon-icon.png">
     <title>HOME</title>
     <!-- Bootstrap -->
     <!-- Latest compiled and minified CSS -->
-    <link href="{{ asset('css/font-awesome.min.css');}}" rel="stylesheet">
-    <link href="{{ asset('css/bootstrap.min.css');}}" rel="stylesheet">
-    <link href="{{ asset('css/style.css');}}" rel="stylesheet">
-    <link href="{{ asset('css/responsive.css');}}" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css')}}">
-    <link href="{{ asset('css/flexslider.css')}}" rel="stylesheet">
+    <link href="{{ asset('css/font-awesome.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/bootstrap.min.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/style.css') }}" rel="stylesheet">
+    <link href="{{ asset('css/responsive.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/jquery-ui.css') }}">
+    <link href="{{ asset('css/flexslider.css') }}" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700,800" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,500,600,700,800" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <script type="text/javascript" src="{{ asset('js/city_state.js')}}"></script>
+    <script type="text/javascript" src="{{ asset('js/city_state.js') }}"></script>
 </head>
 
 <body>
@@ -35,10 +35,11 @@
                     <div class="col-lg-6 col-md-6 col-sm-6 col-xs-12 right_part">
                         <ul>
                             <li class="active before_login">
-                                <a href="{{ route('login_form')}}"><i class="fa fa-lock" aria-hidden="true"></i> &nbspLogin</a>
+                                <a href="{{ route('login_form') }}"><i class="fa fa-lock" aria-hidden="true"></i>
+                                    &nbspLogin</a>
                             </li>
-                            <li><a href="{{ route('registerform')}}"><i class="fa fa-user-o"
-                                        aria-hidden="true"></i> &nbspRegister</a></li>
+                            <li><a href="{{ route('registerform') }}"><i class="fa fa-user-o" aria-hidden="true"></i>
+                                    &nbspRegister</a></li>
                             <li class="dropdown"><a href="#" data-toggle="dropdown" class="dropdown-toggle">
                                     English&nbsp <i class="fa fa-angle-down" aria-hidden="true"></i></a>
                                 <ul class="dropdown-menu">
@@ -53,8 +54,8 @@
                                         </a>
                                     </li>
                                 </ul>
-                            </li  id="google_translate_element">
-                            
+                            </li id="google_translate_element">
+
                         </ul>
                     </div>
                 </div>
@@ -72,43 +73,377 @@
 
                     <ul class="hidden-sm hidden-md hidden-lg mbl_menu">
                         <li class="categry_outr "><a class="categry_link" data-target="#myNavbar"
-                                onclick="openNav()"><img src="{{ asset('images/opu-logo.png')}}"></a>
+                                onclick="openNav()"><img src="{{ asset('images/opu-logo.png') }}"></a>
                             <div class="categry_dtl hidden-sm hidden-md hidden-lg" id="navv"
                                 style="display: none;">
-                                <a class="remove hidden-sm hidden-md hidden-lg" id="remove" onclick="closeNav()"><i class="fas fa-times" aria-hidden="true"></i></a>
+                                <a class="remove hidden-sm hidden-md hidden-lg" id="remove" onclick="closeNav()"><i
+                                        class="fas fa-times" aria-hidden="true"></i></a>
                                 <h2 class="hidden-sm hidden-md hidden-lg">CATEGORY</h2>
                                 <ul class="ctry_ul">
-                                  
+
+                                    {{-- <li><a style="cursor: pointer;"><i class="fa fa-shopping-cart"
+                                                aria-hidden="true"></i>BUY & SALE</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/1">Appliances</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/2">Art,
+                                                        Collectibles</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/3">Baby
+                                                        Items</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/4">Books</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/5">Cds, Dvds
+                                                        and Miscellaneous</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/6">Clothing</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/7">Fashion</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/8">Free</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/9">Furniture</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/10">Health
+                                                        and special needs</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/11">Home –
+                                                        Miscellaneous</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/12">Instruments</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/13">Jewellers</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/14">Shoes</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/15">Sporting
+                                                        goods</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/16">Tools</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/17">Other</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-television"
+                                                aria-hidden="true"></i>ELECTRONICS</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/18">Cameras
+                                                        & Camcorders</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/19">Car
+                                                        Electronics & GPS</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/20">Cell
+                                                        phones & Accessories</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/21">Computers
+                                                        & Tablets</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/22">Video
+                                                        Games</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/23">TV &
+                                                        Audio</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/24">Free</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/71">Other</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-truck"
+                                                aria-hidden="true"></i>CARS & VEHICLES For Sale</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/25">Auto
+                                                        Parts, tires</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/26">Cars</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/27">Bikes &
+                                                        Motorcycles</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/28">Heavy
+                                                        Equipment</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/29">SUVs,
+                                                        Trucks, Vans</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/30">Services</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/31">Free</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/72">Other</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-television"
+                                                aria-hidden="true"></i>CARS & VEHICLES For Rent</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/32">Cars</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/33">SUVs,
+                                                        Trucks, Vans</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/34">Free</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/73">Other</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-suitcase"
+                                                aria-hidden="true"></i>JOBS, SERVICES</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/35">Accounting,
+                                                        receptionist, management</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/36">Bar,
+                                                        food, hospitality</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/37">Cleaning,
+                                                        housekeeping</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/38">Childcare</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/39">Customer
+                                                        service</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/40">Construction,
+                                                        trades</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/41">Engineering</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/42">Financial</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/43">Healthcare</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/44">Hairstylist,
+                                                        salon</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/45">Immigration/Legal</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/46">Photography,
+                                                        videography</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/47">Tutor,
+                                                        languages</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/48">Sales,
+                                                        retail</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/49">Media,
+                                                        fashion</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/50">Programmers,
+                                                        web design, computer</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/51">Translators</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/52">Wedding</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/53">volunteer</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/74">Other</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-home" aria-hidden="true"></i>REAL
+                                            ESTATE For Sale</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/54">Apartment
+                                                        and Condos</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/55">Business,
+                                                        Industrial</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/56">Houses</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/57">Land</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-university"
+                                                aria-hidden="true"></i>REAL ESTATEFor Rent</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/58">Apartment
+                                                        and Condo</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/59">Basement</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/60">Commercial
+                                                        space</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/61">House</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/62">Roommates</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/63">Storage/Parking</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li>
+                                    <li><a style="cursor: pointer;"><i class="fa fa-users"
+                                                aria-hidden="true"></i>Community & Promotions</a>
+                                        <div class="sub-menu2">
+                                            <div class="col-sm-12 sub-menu-inner">
+                                                <ul>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/64">Artists,
+                                                        Musicians</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/65">Classes,
+                                                        Lessons</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/66">Events</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/67">Friendship,
+                                                        networking</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/68">Lost &
+                                                        Found</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/69">Volunteer</a>
+                                                    <a style="cursor: pointer;"
+                                                        href="http://localhost/classified/adslisting/index/70">Other</a>
+
+                                                </ul>
+                                            </div>
+                                        </div>
+                                    </li> --}}
                                 </ul>
                             </div>
                         </li>
                     </ul>
                     <a class="navbar-brand" href="http://localhost/classified/" style=" padding:0; ">
-                        <img src="{{ asset('images/Opulence.png')}}" >
-                        </a>
+                        <img src="{{ asset('images/Opulence.png') }}">
+                    </a>
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav navbar-left">
                         <li class="active categry_outr hidden-xs"><a class="categry_link" data-target="#myNavbar"
-                                onclick="openNav()"><img
-                                    src="{{ asset('images/category.png')}}">&nbspCATEGORY</a>
-                            <div class="categry_dtl" id="navv" style="width: 290px; display: none;">                 
-                                    <ul class="ctry_ul">
-                                        @foreach ($result as $catdata)
-                                            <li><a style="cursor: pointer;"><i class="{{ $catdata['CateIcon']}}"aria-hidden="true"></i>{{ $catdata['CateName']}}</a>
-                                                <div class="sub-menu2">
-                                                    <div class="col-sm-12 sub-menu-inner">
-                                                    
-                                                        <ul>
-                                                            @foreach ($catdata['subcategories'] as $subcat)
+                                onclick="openNav()"><img src="{{ asset('images/category.png') }}">&nbspCATEGORY</a>
+                            <div class="categry_dtl" id="navv" style="width: 290px; display: none;">
 
+                                <ul class="ctry_ul">
+                                    @foreach ($result as $catdata)
+                                        <li><a style="cursor: pointer;"><i
+                                                    class="{{ $catdata['CateIcon'] }}"aria-hidden="true"></i>{{ $catdata['CateName'] }}</a>
+                                            <div class="sub-menu2">
+                                                <div class="col-sm-12 sub-menu-inner">
+                                                    <ul>
+                                                        @foreach ($catdata['subcategories'] as $subcat)
                                                             <li> <a style="cursor: pointer;"
-                                                                href="http://localhost/classified/adslisting/index/1"><i
-                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                    href="http://localhost/classified/adslisting/index/1"><i
+                                                                        class="fa fa-angle-right"
+                                                                        aria-hidden="true"></i>
                                                                     {{ $subcat }}</a></li>
                                                         @endforeach
-                                                        </ul>
-                                                    </div>
+                                                        {{-- <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/1"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Appliances</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/2"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i> Art,
+                                                                Collectibles</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/3"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i> Baby
+                                                                Items</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/4"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Books</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/5"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i> Cds,
+                                                                Dvds and Miscellaneous</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/6"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Clothing</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/7"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Fashion</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/8"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Free</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/9"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Furniture</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/10"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Health and special needs</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/11"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i> Home
+                                                                – Miscellaneous</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/12"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Instruments</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/13"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Jewellers</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/14"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Shoes</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/15"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Sporting goods</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/16"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Tools</a></li>
+                                                        <li> <a style="cursor: pointer;"
+                                                                href="http://localhost/classified/adslisting/index/17"><i
+                                                                    class="fa fa-angle-right" aria-hidden="true"></i>
+                                                                Other</a></li> --}}
+
+
+                                                    </ul>
                                                 </div>
                                             </li>
                                         @endforeach
@@ -116,10 +451,10 @@
                                     </ul>
                             </div>
                         </li>
-                        <li><a href="http://localhost/classified/blog/index/1"><img
-                                    src="{{ asset('images/blog.png')}}">&nbspBLOG</a></li>
+                        <li><a href="{{ route('blogs')}}"><img
+                                    src="{{ asset('images/blog.png') }}">&nbspBLOG</a></li>
                         <li><a href="http://localhost/classified/home/contactus"><img
-                                    src="{{ asset('images/contact.png')}}">&nbspCONTACT US</a>
+                                    src="{{ asset('images/contact.png') }}">&nbspCONTACT US</a>
                         </li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right hidden-xs">
@@ -140,7 +475,7 @@
                 <!-- #region Jssor Slider Begin -->
                 <!-- Generator: Jssor Slider Maker -->
                 <!-- Source: https://www.jssor.com -->
-                <script src="http://localhost/classified/assets/js/jssor.slider-26.5.2.min.js" type="text/javascript"></script>
+                <script src="{{ asset('js/jssor.slider-26.5.2.min.js') }}" type="text/javascript"></script>
                 <script type="text/javascript">
                     jssor_1_slider_init = function() {
 
@@ -330,48 +665,51 @@
                     <div data-u="loading" class="jssorl-009-spin"
                         style="position:absolute;top:0px;left:0px;width:100%;height:100%;text-align:center;background-color:rgba(0,0,0,0.7);">
                         <img style="margin-top:-19px;position:relative;top:50%;width:38px;height:38px;"
-                            src="{{ asset('images/slider/spin.svg')}}" />
+                            src="{{ asset('images/slider/spin.svg') }}" />
                     </div>
                     <div data-u="slides"
                         style="cursor:default;position:relative;top:0px;left:0px;width:1300px;height:500px;overflow:hidden;">
                         <div>
-                            <img data-u="image" src="{{ asset('images/slider/0012.jpg')}}" />
-                            <div data-u="caption" data-t="0"
-                                style="position:absolute;top:120px;left:75px;width:470px;height:220px;">
-                                <img style="position:absolute;top:0px;left:0px;width:470px;height:220px;"
-                                    src="{{ asset('images/slider/c-phone-horizontal.png')}}" />
-                                <div
-                                    style="position:absolute;top:4px;left:45px;width:379px;height:213px;overflow:hidden;">
-                                    <img data-u="caption" data-t="1"
-                                        style="position:absolute;top:0px;left:0px;width:379px;height:213px;"
-                                        src="{{ asset('images/slider/c-slide-1.jpg')}}" />
-                                    <img data-u="caption" data-t="2"
-                                        style="position:absolute;top:0px;left:379px;width:379px;height:213px;"
-                                        src="{{ asset('images/slider/c-slide-3.jpg')}}" />
+                            @foreach ($slider_img as $slider_imgs)
+                                    <img data-u="image" src="{{ asset('images/slider/'.$slider_imgs['ImageName']) }}" />
+                                    <div data-u="caption" data-t="0"
+                                        style="position:absolute;top:120px;left:75px;width:470px;height:220px;">
+                                        <img style="position:absolute;top:0px;left:0px;width:470px;height:220px;"
+                                            src="{{ asset('images/slider/c-phone-horizontal.png') }}" />
+                                        <div
+                                            style="position:absolute;top:4px;left:45px;width:379px;height:213px;overflow:hidden;">
+                                            <img data-u="caption" data-t="1"
+                                                style="position:absolute;top:0px;left:0px;width:379px;height:213px;"
+                                                src="{{ asset('images/slider/c-slide-1.jpg') }}" />
+                                            <img data-u="caption" data-t="2"
+                                                style="position:absolute;top:0px;left:379px;width:379px;height:213px;"
+                                                src="{{ asset('images/slider/c-slide-3.jpg') }}" />
+                                        </div>
+                                        <img style="position:absolute;top:4px;left:45px;width:379px;height:213px;"
+                                            src="{{ asset('images/slider/c-navigator-horizontal.png') }}" />
+                                        <img data-u="caption" data-t="3"
+                                            style="position:absolute;top:476px;left:454px;width:63px;height:77px;"
+                                            src="{{ asset('images/slider/hand.png') }}" />
+                                    </div>
+                                    @endforeach
                                 </div>
-                                <img style="position:absolute;top:4px;left:45px;width:379px;height:213px;"
-                                    src="{{ asset('images/slider/c-navigator-horizontal.png')}}" />
-                                <img data-u="caption" data-t="3"
-                                    style="position:absolute;top:476px;left:454px;width:63px;height:77px;"
-                                    src="{{ asset('images/slider/hand.png')}}" />
-                            </div>
-                        </div>
-                        <div>
-                            <img data-u="image" src="{{ asset('images/slider/0022.jpg')}}" />
-                        </div>
-                        <div>
-                            <img data-u="image" src="{{ asset('images/slider/0032.jpg')}}" />
-                            <div
-                                style="position:absolute;top:30px;left:30px;width:480px;height:130px;background-color:rgba(255,188,5,0.8);font-size:40px;color:#000000;line-height:1.5;padding:5px 5px 5px 5px;box-sizing:border-box;">
-                                TOUCH SWIPE
-                                <br />
-                                RESPONSIVE SLIDER
-                            </div>
-                            <div
-                                style="position:absolute;top:300px;left:30px;width:480px;height:130px;background-color:rgba(255,188,5,0.8);font-size:30px;color:#000000;line-height:1.27;padding:5px 5px 5px 5px;box-sizing:border-box;">
-                                Build your slider with anything, includes image, svg, text, html, photo, picture content
-                            </div>
-                        </div>
+                                <div>
+                                    <img data-u="image" src="{{ asset('images/slider/0022.jpg') }}" />
+                                    <div>
+                                        {{-- <img data-u="image" src="{{ asset('images/slider/0032.jpg') }}" /> --}}
+                                        <div
+                                            style="position:absolute;top:30px;left:30px;width:480px;height:130px;background-color:rgba(255,188,5,0.8);font-size:40px;color:#000000;line-height:1.5;padding:5px 5px 5px 5px;box-sizing:border-box;">
+                                            TOUCH SWIPE
+                                            <br />
+                                            RESPONSIVE SLIDER
+                                        </div>
+                                        <div
+                                            style="position:absolute;top:300px;left:30px;width:480px;height:130px;background-color:rgba(255,188,5,0.8);font-size:30px;color:#000000;line-height:1.27;padding:5px 5px 5px 5px;box-sizing:border-box;">
+                                            Build your slider with anything, includes image, svg, text, html, photo, picture content
+                                        </div>
+                                    </div>
+                                </div>
+                          
                     </div>
                     <!-- Bullet Navigator -->
                     <div data-u="navigator" class="jssorb032" style="position:absolute;bottom:12px;right:12px;"
@@ -412,8 +750,8 @@
                                 <div class="form-group width_form">
                                     <select class="form-control" id="sel1" name="cate_id">
                                         @foreach ($result as $catdata)
-                                           <option>{{ $catdata['CateName']}}</option>                               
-                                         @endforeach
+                                            <option>{{ $catdata['CateName'] }}</option>
+                                        @endforeach
                                     </select>
                                 </div>
                                 <div class="form-group width_form">
@@ -463,13 +801,14 @@
         <div class="container">
             <h1><a href="http://localhost/classified/categories">ALL CATEGORIES</a></h1>
             <div class="row">
-                @foreach ($result as $catdata)                          
+                @foreach ($result as $catdata)
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 custom_padd">
                         <div class="border">
                             <div class="absolute">
-                                <a href="http://localhost/classified/categories"><img src="{{ $catdata['CateImage'];}}" style="width: 30px;"></a>
+                                <a href="http://localhost/classified/categories"><img
+                                        src="{{ $catdata['CateImage'] }}" style="width: 30px;"></a>
                             </div>
-                            <h2 class="cate_heading">{{ $catdata['CateName']}}</h2>
+                            <h2 class="cate_heading">{{ $catdata['CateName'] }}</h2>
                             <a href="http://localhost/classified/adslisting/index/1"
                                 style="cursor:pointer;">Appliances</a>
                             <a href="http://localhost/classified/adslisting/index/2" style="cursor:pointer;">Art,
@@ -477,12 +816,15 @@
                             <a href="http://localhost/classified/adslisting/index/3" style="cursor:pointer;">Baby
                                 Items</a>
                             <a href="http://localhost/classified/adslisting/index/4" style="cursor:pointer;">Books</a>
-                            <a href="http://localhost/classified/adslisting/index/5" style="cursor:pointer;">Cds, Dvds and
+                            <a href="http://localhost/classified/adslisting/index/5" style="cursor:pointer;">Cds, Dvds
+                                and
                                 Miscellaneous</a>
-                            <a href="http://localhost/classified/adslisting/index/6" style="cursor:pointer;">Clothing</a>
-                            <a href="http://localhost/classified/adslisting/index/6" style="cursor:pointer;">Clothing</a>
-                      
-                       
+                            <a href="http://localhost/classified/adslisting/index/6"
+                                style="cursor:pointer;">Clothing</a>
+                            <a href="http://localhost/classified/adslisting/index/6"
+                                style="cursor:pointer;">Clothing</a>
+
+
                             <div class="drop">
                                 <a href="http://localhost/classified/categories" style="cursor: pointer;"><i
                                         class="fa fa-angle-down" aria-hidden="true"></i></a>
@@ -506,10 +848,10 @@
                         <a class="dropdown-toggle" data-toggle="dropdown" href="#">AD CATEGORIES<i
                                 class="fa fa-angle-down fa-lg" aria-hidden="true"></i></i></a>
                         <ul class="dropdown-menu">
-                            @foreach ($internation_cat as $intcat) 
-                               <li><a style="cursor: pointer;">{{$intcat['InternationalCateName']}}</a></li>
+                            @foreach ($internation_cat as $intcat)
+                                <li><a style="cursor: pointer;">{{ $intcat->InternationalCateName }}</a></li>
                             @endforeach
-                          
+
                         </ul>
                     </li>
                     <li><a data-toggle="tab" href="#menu1">LATEST ADS</a></li>
@@ -520,44 +862,42 @@
                         <div class="col-md-12">
                             <div class="carousel slide" id="myCarousel">
                                 <div class="carousel-inner">
-                                    <div class="item active">
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <img src="http://localhost/classified/assets/images/Untitled-1.jpg"
-                                                        class="img-responsive">
-                                                </div>
+                                    @foreach ($add_images as $index => $add_image)
+                                        <div class="item {{ $index == 0 ? 'active' : '' }}">
+                                            <div class="col-md-4 col-sm-6 col-xs-4 wd less">
+                                                <div class="item-wrap">
+                                                    <div class="img-wrap">
+                                                        <img src="{{ asset('images/adspost/' . $add_image['images']['image']) }}"
+                                                            class="img-responsive">
+                                                    </div>
 
-                                                <div class="bottom_sec">
-                                                    <p>For Rent</p>
-                                                    <h4>Main Street market , 1026</h4>
+                                                    <div class="bottom_sec">
+                                                        <p>I am offering</p>
+                                                        <h4>{{ $add_image['state_id'] }}</h4>
+                                                    </div>
+                                                    <div class="bottom_sec2">
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-map-marker"
+                                                                        aria-hidden="true"></i> New york</a></li>
+                                                            <li><a href="#"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 1 hour ago</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="absolute1">
+                                                        <P>AUD 213</P>
+                                                    </div>
                                                 </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>$ 150.00</P>
-                                                </div>
-
                                             </div>
-
-
                                         </div>
-                                    </div>
-
+                                    @endforeach
                                 </div>
+
                                 <a class="left carousel-control" href="#myCarousel" data-slide="prev"><img
-                                        src="http://localhost/classified/assets/images/left.jpg"></a>
+                                        src="{{ asset('images/left.jpg') }}"></a>
                                 <a class="right carousel-control" href="#myCarousel" data-slide="next"><img
-                                        src="http://localhost/classified/assets/images/right.jpg"></a>
+                                        src="{{ asset('images/right.jpg') }}"></a>
                             </div>
                         </div>
-
                     </div>
 
 
@@ -565,399 +905,59 @@
                         <div class="col-md-12">
                             <div class="carousel slide" id="myCarouse2">
                                 <div class="carousel-inner">
-                                    <div class="item active">
+                                    @foreach ($add_images as $index => $add_image)
+                                        <div class="item {{ $index == 0 ? 'active' : '' }}">
+                                            <div class="col-md-4 col-sm-6 col-xs-4 wd less">
+                                                <div class="item-wrap">
+                                                    <div class="img-wrap">
+                                                        <img src="{{ asset('images/adspost/' . $add_image['images']['image']) }}"
+                                                            class="img-responsive">
+                                                    </div>
 
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/sample-ads4.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p>I am offering</p>
-                                                    <h4>Canberra</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AUD 213</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/super-cars6.png"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Ottawa</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AUD 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/stock-vector-set-of-design-elements-for-advertisement-product-web-and-blogs-987152872.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Canberra</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>CAD 100</P>
+                                                    <div class="bottom_sec">
+                                                        <p>{{ $add_image['add_title'] }}</p>
+                                                        <h4>{{ $add_image['state_id'] }}</h4>
+                                                    </div>
+                                                    <div class="bottom_sec2">
+                                                        <ul>
+                                                            <li><a href="#"><i class="fa fa-map-marker"
+                                                                        aria-hidden="true"></i>{{ $add_image['country_id'] }}</a>
+                                                            </li>
+                                                            <li><a href="#"><i class="fa fa-clock-o"
+                                                                        aria-hidden="true"></i> 1 hour ago</a></li>
+                                                        </ul>
+                                                    </div>
+                                                    <div class="absolute1">
+                                                        <P>AUD 213</P>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/sample-ads38.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Sogn og Fjordane</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AUD 500</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/iphone-8-concept-embedded-fingerprint-reader16.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Ostergotlands</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>GBP 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/image(3)3.jpeg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Alberta</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>ETB 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/sample-ads37.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Abu Dhabi</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>CAD 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/image(1)7.jpeg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Australian Capital Territory</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>DEM 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/super-cars5.png"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Alberta</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AUD 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/image9.jpeg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Canberra</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AED 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/iphone-8-concept-embedded-fingerprint-reader15.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Canberra</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AUD 500</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                    <div class="item">
-
-                                        <div class="col-md-4 col-sm-6 col-xs-4 wd less">
-                                            <div class="item-wrap">
-                                                <div class="img-wrap">
-                                                    <!--  <img src="" class="img-responsive"> -->
-                                                    <img src="http://localhost/classified/assets/images/adspost/sample-ads36.jpg"
-                                                        class="img-responsive">
-                                                </div>
-
-                                                <div class="bottom_sec">
-                                                    <p></p>
-                                                    <h4>Canberra</h4>
-                                                </div>
-                                                <div class="bottom_sec2">
-                                                    <ul>
-                                                        <li><a href="#"><i class="fa fa-map-marker"
-                                                                    aria-hidden="true"></i> New york</a></li>
-                                                        <li><a href="#"><i class="fa fa-clock-o"
-                                                                    aria-hidden="true"></i> 1 hour ago</a></li>
-                                                    </ul>
-                                                </div>
-                                                <div class="absolute1">
-                                                    <P>AUD 100</P>
-                                                </div>
-
-
-                                            </div>
-
-                                        </div>
-                                    </div>
-
+                                    @endforeach
                                 </div>
                                 <a class="left carousel-control" href="#myCarouse2" data-slide="prev"><img
-                                        src="http://localhost/classified/assets/images/left.jpg"></i></a>
+                                        src="{{ asset('images/left.jpg') }}"></i></a>
                                 <a class="right carousel-control" href="#myCarouse2" data-slide="next"><img
-                                        src="http://localhost/classified/assets/images/right.jpg"></i></a>
-                            </div>
-                        </div>
-                    </div>
-                    <div id="menu2" class="tab-pane fade">
-                        <div class="col-md-12">
-                            <div class="carousel slide" id="myCarouse3">
-                                <div class="carousel-inner">
-
-                                </div>
-                                <a class="left carousel-control" href="#myCarouse3" data-slide="prev"><img
-                                        src="http://localhost/classified/assets/images/left.jpg"></a>
-                                <a class="right carousel-control" href="#myCarouse3" data-slide="next"><img
-                                        src="http://localhost/classified/assets/images/right.jpg"></a>
+                                        src="{{ asset('images/right.jpg') }}"></i></a>
                             </div>
                         </div>
                     </div>
                 </div>
+                <div id="menu2" class="tab-pane fade">
+                    <div class="col-md-12">
+                        <div class="carousel slide" id="myCarouse3">
+                            <div class="carousel-inner">
+
+                            </div>
+                            <a class="left carousel-control" href="#myCarouse3" data-slide="prev"><img
+                                    src="{{ asset('images/left.jpg') }}"></a>
+                            <a class="right carousel-control" href="#myCarouse3" data-slide="next"><img
+                                    src="{{ asset('images/right.jpg') }}"></a>
+                        </div>
+                    </div>
+                </div>
             </div>
+        </div>
         </div>
     </section>
     <script type="text/javascript">
@@ -978,8 +978,6 @@
 
 
             });
-
-
         }
     </script>
 
@@ -992,8 +990,8 @@
                     <form class="form-inline" id="mailchimpform">
                         <div class="bottom_border">
                             <div class="form-group">
-                                <input type="email" class="form-control" name="mailchimpemail"
-                                    id="mailchimpemail" placeholder="Enter email address">
+                                <input type="email" class="form-control" name="mailchimpemail" id="mailchimpemail"
+                                    placeholder="Enter email address">
                             </div>
                             <button type="submit" id="submit" class="btn btn-default mailchimp"
                                 onclick="mailForm()"><i class="fa fa-angle-right" aria-hidden="true"></i></button>
@@ -1006,20 +1004,16 @@
                 <div class="col-lg-4 col-md-4 col-sm-5 col-xs-6 wd center">
                     <h3>Follow us on Social</h3>
                     <ul>
-                        <li><a target="_blank" href="https://www.facebook.com/111"><i class="fab fa-facebook" aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="https://twitter.com/11"><i class="fab fa-twitter"
-                                    aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="https://plus.google.com/u/0/106052877252094181942"><i
-                                    class="fab fa-google-plus" aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="https://in.pinterest.com/111"><i class="fab fa-pinterest-p"
-                                    aria-hidden="true"></i></a></li>
-                        <li><a target="_blank" href="https://www.linkedin.com/111"><i class="fab fa-linkedin"
-                                    aria-hidden="true"></i></a></li>
+                        @foreach ($social_icon as $social_icons)
+                            <li><a target="_blank" href="{{ $social_icons->SocialiconURL }}"><i
+                                        class="{{ $social_icons->SocialiconClass }}" aria-hidden="true"></i></a></li>
+                        @endforeach
+
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 wd right">
-                    <a href="http://localhost/classified/"><img
-                            src="http://localhost/classified/assets/images/logo.png"></a>
+                    <a href="http://localhost/classified/"><img src="{{ asset('images/Opulence.png') }}"
+                            width="100%" height="100%"></a>
                 </div>
             </div>
 
@@ -1034,7 +1028,7 @@
             </div>
         </div>
         <div class="copy">
-            <p>© Copyright 2017<img src="http://localhost/classified/assets/images/Untitled-3dghdg.png"></p>
+            <p>© Copyright 2017<img src="{{ asset('images/Untitled-3dghdg.png')}}"></p>
         </div>
     </footer>
     <script type="text/javascript">
@@ -1052,9 +1046,8 @@
                         //  alert('ajkdadjajd');
                         $('#mailsuccess').html(
                             '<label id="mailchimpemail-error" class="error" style="color:green;" for="mailchimpemail">Thanks for joining us we will contact with you soon</label>'
-                            );
+                        );
                     } else if (response.msg == 'error') {
-
 
                     }
                 }
@@ -1070,13 +1063,13 @@
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-    <script src="http://localhost/classified/assets/js/jquery-ui.js"></script>
-    <script src="http://localhost/classified/assets/js/jquery.validate-1.16.0.min.js"></script>
+    <script src="{{ asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{ asset('js/jquery-ui.js')}}"></script>
+    <script src="{{ asset('js/jquery.validate-1.16.0.min.js')}}"></script>
 
-    <script src="http://localhost/classified/assets/js/validate-custom-en.min.js"></script>
+    <script src="{{ asset('js/validate-custom-en.min.js')}}"></script>
 
-    <script src="http://localhost/classified/assets/js/flexslider.js"></script>
+    <script src="{{ asset('js/flexslider.js')}}"></script>
     <script>
         // jQuery(document).ready(function($) {
         //      SyntaxHighlighter.all();

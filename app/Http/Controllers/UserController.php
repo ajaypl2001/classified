@@ -1,9 +1,9 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use App\Models\Category;
 use App\Models\Subcategory;
+use App\Models\International_category;
+use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -11,6 +11,8 @@ class UserController extends Controller
 {
     public function home()
     {
+        // $result=Category::with('subcategories')->get()->toArray();
+            
         $data = DB::table('categories')
             ->leftJoin('subcategories', 'categories.CateId', '=', 'subcategories.CateId')
             ->select('categories.CateId as category_id', 'categories.CateName', 'categories.CateNameAmahric', 'categories.CateIcon', 'categories.CateImage', 'categories.CateDate', 'categories.CateModify', 'categories.CateStatus', 'subcategories.ScateName')
@@ -33,11 +35,12 @@ class UserController extends Controller
                 'subcategories' => $subcategories,
             ];
         }
-
-        $internation_cat=DB::table('international_category')->get()->toArray();
+        $internation_cat=International_category::all()->toArray();
         // echo "<pre>";
-        // print_r($internation_cat);
+        // print_r($nternation_cat);
         // echo "</pre>"; die;
+
+        // $internation_cat=DB::table('international_category')->get()->toArray();
       
         return view('home', compact('result', 'internation_cat'));
     }

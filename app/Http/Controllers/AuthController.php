@@ -32,7 +32,7 @@ class AuthController extends Controller
         if ($request->hasFile('UserFile')) {
             $user->UserFile = $request->file('UserFile')->store('uploads', 'public');
         }
-
+        
         $user->UserEmail = $request->UserEmail;
         $user->UserPassword = Hash::make($request->UserPassword);
         $user->UserMobile = $request->UserMobile;

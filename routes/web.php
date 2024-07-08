@@ -17,6 +17,7 @@ Route::get('/admin', [AuthController::class, 'admin']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
 Route::get('/home', [UserController::class, 'home'])->name('home');
+Route::get('/bolgs', [UserController::class, 'blogs'])->name('blogs');
 
 Route::get('/test', [AdminController::class, 'test']);
 

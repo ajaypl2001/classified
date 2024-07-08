@@ -56,21 +56,30 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
-        $request->validate([
-            'UserEmail' => 'required|email',
-            'UserPassword' => 'required',
-        ]);
+        // $request->validate([
+        //     'UserEmail' => 'required|email',
+        //     'UserPassword' => 'required',
+        // ]);
 
-        $user = User::where('UserEmail', $request->UserEmail)->first();
+        if (Auth::guard('admin')->attempt($request->only('Admin_email', 'Admin_password'))) {
+            return redirect()->route('admin-dashboard');
+        };
 
-        if ($user && Hash::check($request->UserPassword, $user->UserPassword)) {
-            Auth::login($user);
+        if (Auth::guard('web')->attempt($request->only('UserEmail', 'UserPassword'))) {
             return redirect()->route('home');
-        } else {
-            return redirect()->back()->withErrors([
-                'password' => 'Invalid credentials.',
-            ])->withInput();
         }
+        return back()->withErrors(['email' => 'These credentials do not match our records.']);
+
+        // $user = User::where('UserEmail', $request->UserEmail)->first();
+
+        // if ($user && Hash::check($request->UserPassword, $user->UserPassword)) {
+        //     Auth::login($user);
+        //     return redirect()->route('home');
+        // } else {
+        //     return redirect()->back()->withErrors([
+        //         'password' => 'Invalid credentials.',
+        //     ])->withInput();
+        // }
     }
 
 }

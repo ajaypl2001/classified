@@ -8,7 +8,6 @@ use App\Models\Post_add;
 use App\Models\Sliderimage;
 use App\Models\Subcategory;
 use App\Models\International_category;
-use App\Models\Category;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 
@@ -44,7 +43,7 @@ class UserController extends Controller
         $add_images=Post_add::with('images')->get()->toArray();
         $social_icon=DB::table('social_icon')->get()->toArray();
         $slider_img=Sliderimage::all()->toArray();
-        $internation_cat=DB::table('international_category')->get()->toArray();
+        $internation_cat=DB::table('international_categories')->get()->toArray();
       
         return view('home', compact('result', 'internation_cat', 'add_images', 'social_icon', 'slider_img'));
     }

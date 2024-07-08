@@ -1005,10 +1005,8 @@
                     <h3>Follow us on Social</h3>
                     <ul>
                         @foreach ($social_icon as $social_icons)
-                            <li><a target="_blank" href="{{ $social_icons->SocialiconURL }}"><i
-                                        class="{{ $social_icons->SocialiconClass }}" aria-hidden="true"></i></a></li>
+                            <li><a target="_blank" href="{{ $social_icons->SocialiconURL }}"><i class="{{ $social_icons->SocialiconClass }}" aria-hidden="true"></i></a></li>
                         @endforeach
-
                     </ul>
                 </div>
                 <div class="col-lg-3 col-md-3 col-sm-2 col-xs-6 wd right">
@@ -1164,15 +1162,6 @@
     </script>
     <script async defer
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAGUpZDsOjNhbb1iG1OUikWqdrUdKpwnT0&callback=initMap"></script>
-
-
-
-
-
-
-
-
-
 
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script>

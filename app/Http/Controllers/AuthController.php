@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    //    Authentication
+    //Authentication
     public function loginform()
     {
         return view('users.login');
@@ -56,11 +56,6 @@ class AuthController extends Controller
     }
     public function login(Request $request)
     {
-        // $request->validate([
-        //     'UserEmail' => 'required|email',
-        //     'UserPassword' => 'required',
-        // ]);
-
         if (Auth::guard('admin')->attempt($request->only('Admin_email', 'Admin_password'))) {
             return redirect()->route('admin-dashboard');
         };

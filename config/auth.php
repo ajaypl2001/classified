@@ -45,6 +45,10 @@ return [
             'driver' => 'session',
             'provider' => 'admins',
         ],
+        'api_users' => [
+            'driver' => 'session',
+            'provider' => 'api_users',
+        ],
     ],
 
     /*
@@ -75,10 +79,10 @@ return [
             'model' => App\Models\Admin::class,
         ],
 
-        // 'users' => [
-        //     'driver' => 'database',
-        //     'table' => 'users',
-        // ],
+        'api_users' => [
+            'driver' => 'eloquent',
+            'model' => App\Models\ApiUser::class,
+        ],
     ],
 
     /*

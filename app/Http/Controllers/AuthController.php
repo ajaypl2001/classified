@@ -62,19 +62,11 @@ class AuthController extends Controller
 
         if (Auth::guard('web')->attempt($request->only('UserEmail', 'UserPassword'))) {
             return redirect()->route('home');
+        } else {
+            return redirect()->back()->withErrors([
+                'password' => 'Invalid credentials.',
+            ])->withInput();
         }
-        return back()->withErrors(['email' => 'These credentials do not match our records.']);
-
-        // $user = User::where('UserEmail', $request->UserEmail)->first();
-
-        // if ($user && Hash::check($request->UserPassword, $user->UserPassword)) {
-        //     Auth::login($user);
-        //     return redirect()->route('home');
-        // } else {
-        //     return redirect()->back()->withErrors([
-        //         'password' => 'Invalid credentials.',
-        //     ])->withInput();
-        // }
     }
 
 }

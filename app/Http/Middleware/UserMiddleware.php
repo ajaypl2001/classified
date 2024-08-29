@@ -12,7 +12,7 @@ class UserMiddleware
     public function handle(Request $request, Closure $next): Response
     {
         if (!Auth::guard('web')->check()) {
-            return redirect()->route('login');
+            return redirect()->route('login_form');
         }
 
         return $next($request);

@@ -9,12 +9,14 @@ Route::get('/', function () {
 });
 
 // Admin panels
-Route::group(['middleware' => ['admin']], function () {
+Route::group(['middleware' => ['admins']], function () {
     Route::get('/admin-dashboard',[AdminController::class, 'dashboard'])->name('admin-dashboard');
 });
+
 Route::group(['middleware' => ['user']], function () {
     Route::get('/home', [UserController::class, 'home'])->name('home');
 });
+
 Route::get('/login_form', [AuthController::class, 'loginform'])->name('login_form');
 Route::get('/registerform', [AuthController::class, 'registerform'])->name('registerform');
 Route::get('/admin', [AuthController::class, 'admin']);

@@ -14,7 +14,7 @@ Route::group(['middleware' => ['admins']], function () {
 });
 
 Route::group(['middleware' => ['user']], function () {
-    Route::get('/home', [UserController::class, 'home'])->name('home');
+    Route::get('/homes', [UserController::class, 'home'])->name('home');
 });
 
 Route::get('/login_form', [AuthController::class, 'loginform'])->name('login_form');
@@ -22,8 +22,20 @@ Route::get('/registerform', [AuthController::class, 'registerform'])->name('regi
 Route::get('/admin', [AuthController::class, 'admin']);
 Route::post('/login', [AuthController::class, 'login'])->name('login');
 Route::post('/register', [AuthController::class, 'register'])->name('register');
+
 Route::get('/home', [UserController::class, 'home'])->name('home');
 Route::get('/bolgs', [UserController::class, 'blogs'])->name('blogs');
-
 Route::get('/test', [AdminController::class, 'test']);
+
+Route::prefix('global')->group(function(){
+    Route::get('/home', [UserController::class, 'home'])->name('home');
+    Route::get('/bolgs', [UserController::class, 'blogs'])->name('blogs');
+    Route::get('/test', [AdminController::class, 'test']);
+});  
+
+// fallback function 
+Route::fallback(function(){
+    return "<h1>Page Not Found!</h1>";
+});
+
 

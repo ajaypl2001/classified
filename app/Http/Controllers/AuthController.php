@@ -12,7 +12,6 @@ use Illuminate\Support\Facades\Hash;
 
 class AuthController extends Controller
 {
-    //    Authentication
     public function loginform()
     {
         return view('users.login');
@@ -54,17 +53,13 @@ class AuthController extends Controller
 
         return redirect()->route('home')->with('success', 'User registered successfully');
     }
-    public function login(Request $request)
-    {
-        $request->validate([
-            'UserEmail' => 'required|email',
-            'UserPassword' => 'required',
-        ]);
-    
-        $user = User::where('UserEmail', $request->UserEmail)->first();
+    public function login(Request $request){
+        if (Auth::guard('admin')->attempt($request->only('Admin_email', 'Admin_password'))) {
+            // echo "ok"; die;
+            return redirect()->route('admin-dashboard');
+        };
 
-        if ($user && Hash::check($request->UserPassword, $user->UserPassword)) {
-            Auth::login($user);
+        if (Auth::guard('web')->attempt($request->only('UserEmail', 'UserPassword'))) {
             return redirect()->route('home');
         } else {
             return redirect()->back()->withErrors([

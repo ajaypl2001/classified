@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{{-- <!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -142,4 +142,89 @@
     </script>
 </body>
 
+</html> --}}
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Registration Form | opulancedigit</title>
+    <link rel="stylesheet" href="{{ asset('css/register.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Register Form</h1>
+        <div class="title">Registration</div>
+        <div class="content">
+            <form action="#">
+                <div class="user-details">
+                    <div class="input-box">
+                        <span class="details">User Fb Id</span>
+                        <input type="text" placeholder="Enter your fb id" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Full Name</span>
+                        <input type="text" placeholder="Enter your full name" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User File</span>
+                        <input type="file" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Email</span>
+                        <input type="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Mobile</span>
+                        <input type="text" placeholder="Enter your mobile" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Password</span>
+                        <input type="password" placeholder="Enter your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">Confirm Password</span>
+                        <input type="password" placeholder="Confirm your password" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Country</span>
+                        <input type="text" placeholder="Enter your country" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User State</span>
+                        <input type="text" placeholder="Enter your state" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Address</span>
+                        <textarea placeholder="Enter your address" required></textarea>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Email Code</span>
+                        <input type="text" placeholder="Enter your email code" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Email Verify</span>
+                        <input type="text" placeholder="Verify Email" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User About</span>
+                        <input type="text" placeholder="Enter User About" required>
+                    </div>
+                    <div class="input-box">
+                        <span class="details">User Account</span>
+                        <input type="text" placeholder="Enter your Account" required>
+                    </div>
+                </div>
+                <div class="button">
+                    <input type="submit" value="Register">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
 </html>
+
+
